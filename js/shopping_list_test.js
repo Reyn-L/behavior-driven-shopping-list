@@ -1,10 +1,12 @@
 var expect = chai.expect;
 var should = chai.should();
 
+var list;
+
 describe("ShoppingListItem Class", function() {
 
   beforeEach(function(){
-    list = new ShoppingListItem("bob");
+    list = new ShoppingListItem("Jody", "Black", false);
   });
 
   it('should be a class', function() {
@@ -24,28 +26,17 @@ describe("ShoppingListItem Class", function() {
   });
 
   it('should have a constructor "name"', function() {
-    expect(list).to.equal(newShoppingListItem.name);
+    expect(list.name).to.equal("Jody");
   });
 
   it('should have a constructor named "description"', function() {
-    expect(list).to.equal(newShoppingListItem.description);
+    expect(list.description).to.equal("Black");
   });
 
-  it('should have a method named "check"', function() {
-    expect(list.check()).to.equal("check");
+  it('should have a method named check', function(){
+    expect(list.check()).to.equal();
   });
 
-  it('method named check should set is_done to true', function() {
-    expect(list.check()).to.equal(true);
-  });
-
-it('should have a method named "uncheck"', function() {
-    expect(list.uncheck()).to.equal("uncheck");
-  });
-
-  it('method named uncheck should set is_done to false', function() {
-    expect(list.uncheck()).to.equal(false);
-  });
-
+ 
 
 });
