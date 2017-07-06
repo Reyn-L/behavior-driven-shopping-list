@@ -5,7 +5,7 @@ var list;
 
 describe("ShoppingListItem Class", function() {
 
-  beforeEach(function(){
+  before(function(){
     list = new ShoppingListItem("Jody", "Black");
   });
 
@@ -34,12 +34,13 @@ describe("ShoppingListItem Class", function() {
   });
 
   it('should have a method named check', function(){
-    expect(list.check()).to.equal();
+    expect(list.check).to.be.a('function');
   });
 
   it('check method should set is_done to be true', function() {
+    list.check();
     expect(list.is_done).to.equal(true);
-    check();
+   
   });
 
 
