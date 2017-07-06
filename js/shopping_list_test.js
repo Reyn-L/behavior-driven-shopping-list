@@ -45,4 +45,9 @@ describe("ShoppingListItem Class", function() {
   it('should have a method named uncheck', function(){
     expect(list.uncheck).to.be.a('function');
   });
+
+  it('uncheck method should set is_done to be false', function(){
+    list.uncheck();
+    expect(list.is_done).to.equal(false);
+  });
 });
