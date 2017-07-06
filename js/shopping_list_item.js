@@ -11,6 +11,7 @@ class ShoppingListItem {
   }
 
   uncheck() {
+    this.is_done = false;
 
   }
 }

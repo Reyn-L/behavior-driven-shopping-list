@@ -50,4 +50,8 @@ describe("ShoppingListItem Class", function() {
     list.uncheck();
     expect(list.is_done).to.equal(false);
   });
+
+  it('should have a method named render', function(){
+    expect(list.render).to.be.a('function');
+  });
 });
