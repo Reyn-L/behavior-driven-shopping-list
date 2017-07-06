@@ -54,4 +54,8 @@ describe("ShoppingListItem Class", function() {
   it('should have a method named render', function(){
     expect(list.render).to.be.a('function');
   });
+
+  it('return an hmtl formatted string', function() {
+    expect(list.render).to.equal(' ');
+ });
 });
