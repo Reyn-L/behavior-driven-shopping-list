@@ -6,7 +6,7 @@ var list;
 describe("ShoppingListItem Class", function() {
 
   beforeEach(function(){
-    list = new ShoppingListItem("Jody", "Black", false);
+    list = new ShoppingListItem("Jody", "Black");
   });
 
   it('should be a class', function() {
@@ -37,6 +37,10 @@ describe("ShoppingListItem Class", function() {
     expect(list.check()).to.equal();
   });
 
- 
+  it('check method should set is_done to be true', function() {
+    expect(list.is_done).to.equal(true);
+    check();
+  });
+
 
 });
