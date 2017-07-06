@@ -56,22 +56,33 @@ describe("ShoppingListItem Class", function() {
     expect(list.render).to.be.a('function');
   });
 
-  it('should create a li', function() {
+  it('should create li element', function() {
     //invoke inside to check return
     expect(list.render()).to.be.instanceof(Element);
   });
 
-  it('li element should have a class', function(){
-    expect(list.render()).to.be.contain(Class);
+  it('element li should have a propertyof className',function() {
+    expect(list.render()).to.have.property('className');
+  });
+
+  it('className should equal to hope', function() {
+    expect(list.render().className).to.equal("hope");
   });
 });
 
 
 
+/*it('should throw a forced error', function(){
+  expect(jeese.throwErr.bind(jeese)).to.throw();
+});*/
 
 
 
 
+
+/* it('should throw when wrapped in anonymouse function', function() {
+  expect(function() ( jeese.throwErr();)).to.throw();
+}) */
 
 
 

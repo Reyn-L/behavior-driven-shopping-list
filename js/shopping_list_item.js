@@ -15,6 +15,8 @@ class ShoppingListItem {
   }
 
   render() {
-    return document.createElement('li');
+    let li = document.createElement('li');
+    li.className = "hope";
+    return li;
   }
 }
