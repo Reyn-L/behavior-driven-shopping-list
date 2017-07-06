@@ -15,6 +15,6 @@ class ShoppingListItem {
   }
 
   render() {
-
+    return document.createElement('li');
   }
 }

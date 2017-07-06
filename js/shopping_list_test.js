@@ -47,6 +47,7 @@ describe("ShoppingListItem Class", function() {
   });
 
   it('uncheck method should set is_done to be false', function(){
+    //invoke outside because not checking return
     list.uncheck();
     expect(list.is_done).to.equal(false);
   });
@@ -55,7 +56,29 @@ describe("ShoppingListItem Class", function() {
     expect(list.render).to.be.a('function');
   });
 
-  it('return an hmtl formatted string', function() {
-    expect(list.render).to.equal(' ');
- });
+  it('should create a li', function() {
+    //invoke inside to check return
+    expect(list.render()).to.be.instanceof(Element);
+  });
+
+  it('li element should have a class', function(){
+    expect(list.render()).to.be.contain(Class);
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
