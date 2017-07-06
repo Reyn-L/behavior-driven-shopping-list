@@ -40,7 +40,6 @@ describe("ShoppingListItem Class", function() {
   it('check method should set is_done to be true', function() {
     list.check();
     expect(list.is_done).to.equal(true);
-   
   });
 
 
