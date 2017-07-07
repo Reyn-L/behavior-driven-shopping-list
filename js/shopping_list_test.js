@@ -1,10 +1,9 @@
 var expect = chai.expect;
 var should = chai.should();
 
-var list;
-var shop;
 
 describe("ShoppingListItem Class", function() {
+var list;
 
   before(function(){
     list = new ShoppingListItem("Broccoli", "Healthy and very delicious vegetables.");
@@ -89,11 +88,23 @@ describe("ShoppingListItem Class", function() {
 
 
 describe("ShoppingList Class", function() {
+  var shop;
   var test;
+  var water;
+  var bread;
+  var jello;
+  var broccoli;
   before(function(){
-    shop = new ShoppingList();
+   water = new ShoppingListItem("water", "Very thirst quenching.");
+   bread = new ShoppingListItem("bread", "Wheat bread.");
+   jello = new ShoppingListItem("jello", "Very sweet and cold.");
+   broccoli = new ShoppingListItem("Broccoli", "Healthy and very delicious vegetables.");
+   shop = new ShoppingList();
+   shop.addItem(water);
+   shop.addItem(bread);
+   shop.addItem(jello);
+
    // list = new ShoppingListItem();
-    list = new ShoppingListItem("Broccoli", "Healthy and very delicious vegetables.");
   });
 
   it('should be a class', function() {
@@ -113,21 +124,27 @@ describe("ShoppingList Class", function() {
   });
 
   it('addItem should have a parameter that is an instanceof ShoppingListItem', function() {
-    shop.addItem(list);
-    expect(list).to.be.a.instanceof(ShoppingListItem);
+    expect(broccoli).to.be.a.instanceof(ShoppingListItem);
   });
 
-it('should throw a forced error', function(){
+  it('add items to ShoppingList', function(){
+    console.log(shop.items);
+  expect(shop.items).to.have.length(3);
+  });
+
+  it('should throw a forced error', function(){
   expect(shop.addItem.bind(shop, 'clear')).to.throw('Invalid item') ;
-});
+  });
 
-it('ShoppingList should have method named removeItem()', function(){
+  it('ShoppingList should have method named removeItem()', function(){
   expect(shop.removeItem).to.be.a('function');
-});
+  });
 
-it('removeItem should accept argument that is an instanceof ShoppingListItem', function() {
+  it('removeItem should accept argument that is an instanceof ShoppingListItem', function() {
   expect(list).to.be.a.instanceof(ShoppingListItem);
-});
+  });
+
+
 });
 
 
