@@ -14,5 +14,9 @@ class ShoppingList {
       console.log(this.chips + " has been added");
     }
   }
+
+  removeItem() {
+
+  }
 }
 

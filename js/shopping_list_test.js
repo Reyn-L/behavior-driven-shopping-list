@@ -114,7 +114,7 @@ describe("ShoppingList Class", function() {
 
   it('addItem should have a parameter that is an instanceof ShoppingListItem', function() {
     shop.addItem(list);
-    expect(list).to.be.an.instanceof(ShoppingListItem);
+    expect(list).to.be.a.instanceof(ShoppingListItem);
   });
 
 it('should throw a forced error', function(){
@@ -125,6 +125,9 @@ it('ShoppingList should have method named removeItem()', function(){
   expect(shop.removeItem).to.be.a('function');
 });
 
+it('removeItem should accept argument that is an instanceof ShoppingListItem', function() {
+  expect(list).to.be.a.instanceof(ShoppingListItem);
+});
 });
 
 
