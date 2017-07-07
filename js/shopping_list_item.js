@@ -16,7 +16,13 @@ class ShoppingListItem {
 
   render() {
     let li = document.createElement('li');
-    li.className = "hope";
+    li.className = "completed_[is_done]";
+    
+    let span = document.createElement('span');
     return li;
   }
+
+
+
+
 }

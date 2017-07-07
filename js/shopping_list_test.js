@@ -65,9 +65,16 @@ describe("ShoppingListItem Class", function() {
     expect(list.render()).to.have.property('className');
   });
 
-  it('className should equal to hope', function() {
-    expect(list.render().className).to.equal("hope");
+  //Come back to, may not be correct.
+  it('className should equal to completed_[is_done]', function() {
+    expect(list.render().className).to.equal("completed_[is_done]");
   });
+
+  it('should create span element inside render()', function(){
+    expect(list.render()).to.be.instanceof(Element);
+  });
+
+
 });
 
 
