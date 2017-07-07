@@ -92,8 +92,8 @@ describe("ShoppingList Class", function() {
   var test;
   before(function(){
     shop = new ShoppingList();
-    list = new ShoppingListItem();
-    test = new ShoppingListItem("carrrot", "orange");
+   // list = new ShoppingListItem();
+    list = new ShoppingListItem("Broccoli", "Healthy and very delicious vegetables.");
   });
 
   it('should be a class', function() {
@@ -113,8 +113,8 @@ describe("ShoppingList Class", function() {
   });
 
   it('addItem should have a parameter that is an instanceof ShoppingListItem', function() {
-    shop.addItem(test);
-    expect(test).to.be.an.instanceof(ShoppingListItem);
+    shop.addItem(list);
+    expect(list).to.be.an.instanceof(ShoppingListItem);
   });
 
 it('should throw a forced error', function(){
