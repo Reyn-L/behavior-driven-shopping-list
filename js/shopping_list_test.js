@@ -117,22 +117,21 @@ describe("ShoppingList Class", function() {
     expect(test).to.be.an.instanceof(ShoppingListItem);
   });
 
+it('should throw a forced error', function(){
+  expect(shop.throwErr.bind(shop)).to.throw();
 });
 
 
+});
 
 
-/*it('should throw a forced error', function(){
-  expect(jeese.throwErr.bind(jeese)).to.throw();
-});*/
-
-
-
-
-
-/* it('should throw when wrapped in anonymouse function', function() {
+ /*it('should throw when wrapped in anonymouse function', function() {
   expect(function() ( jeese.throwErr();)).to.throw();
-}) */
+}) ;
+*/
+
+
+
 
 
 

@@ -5,7 +5,7 @@ class ShoppingList {
     this.items = [];
   }
 
-  addItem() {
+  addItem(chips) {
 
   }
 }
