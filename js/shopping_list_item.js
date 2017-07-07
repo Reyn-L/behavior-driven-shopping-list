@@ -27,11 +27,6 @@ class ShoppingListItem {
     li.appendChild(span);
     li.appendChild(spanTwo);
 
-console.log(li);
     return li;
   }
-
-
-
-
 }

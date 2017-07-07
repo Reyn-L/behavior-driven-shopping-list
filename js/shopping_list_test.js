@@ -2,6 +2,7 @@ var expect = chai.expect;
 var should = chai.should();
 
 var list;
+var shop;
 
 describe("ShoppingListItem Class", function() {
 
@@ -73,24 +74,36 @@ describe("ShoppingListItem Class", function() {
     expect(list.render().childElementCount).to.equal(2);
   });
 
-  it('should have a name span tag', function() {
+  it('should have a name within the 1st span tag', function() {
     var a = list.render();
     var span = a.querySelectorAll("span")[0];
-
     console.log(span);
     expect(span.innerText).to.equal(list.name);
-
   });
 
- /* it('should have a description within the span tag', function() {
-    expect(list.render().innerText).to.equal(list.description);
+  it('should have a description within the 2nd span tag', function() {
+    var lst = list.render();
+    var spanTwo = lst.querySelectorAll('span')[1];
+    expect(spanTwo.innerText).to.equal(list.description);
   });
-*/
+});
+
+
+describe("ShoppingList Class", function() {
+
+  before(function(){
+    shop = new ShoppingList();
+  });
+
+  it('should be a class', function() {
+    expect(ShoppingList).to.be.a('function');
+  });
 
 
 
 
 });
+
 
 
 
