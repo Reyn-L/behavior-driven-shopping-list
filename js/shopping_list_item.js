@@ -21,11 +21,12 @@ class ShoppingListItem {
     let span = document.createElement('span');
     span.innerText = this.name;
 
-    let spantwo = document.createElement('span');
+    let spanTwo = document.createElement('span');
+    spanTwo.innerText = this.description;
 
 
-    //return will be changed, but for the sake of tests, it is set to spantwo
-    return spantwo;
+    
+    return li;
   }
 
 

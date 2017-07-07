@@ -88,6 +88,10 @@ describe("ShoppingListItem Class", function() {
     expect(list.render().innerText).to.equal(list.description);
   });
 
+  it('should append span to li element', function(){
+    expect(list.render().appendChild).to.equal();
+  });
+
 
 });
 
