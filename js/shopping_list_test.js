@@ -84,6 +84,9 @@ describe("ShoppingListItem Class", function() {
     expect(list.render()).to.be.instanceof(Element);
   });
 
+  it('should have a description within the span tag', function() {
+    expect(list.render().innerText).to.equal(list.description);
+  });
 
 
 });
