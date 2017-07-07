@@ -66,17 +66,25 @@ describe("ShoppingListItem Class", function() {
   });
 
   //Come back to, may not be correct.
-  it('className should equal to completed_[is_done]', function() {
-    expect(list.render().className).to.equal("completed_[is_done]");
-  });
+ /* it('className should equal to completed_[is_done]', function() {
+    expect(list.render().className).to.equal("completed_" + this.is_done);
+  });*/
 
   it('should create span element inside render()', function(){
     expect(list.render()).to.be.instanceof(Element);
   });
 
   it('should have a name within the span tag', function() {
-    expect(list.render().span.innertext).to.equal(list.name);
+    console.log(list.render());
+    expect(list.render().innerText).to.equal(list.name);
+
   });
+
+  it('should create span element inside render()', function(){
+    expect(list.render()).to.be.instanceof(Element);
+  });
+
+
 
 });
 
