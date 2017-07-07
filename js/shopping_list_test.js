@@ -77,7 +77,6 @@ describe("ShoppingListItem Class", function() {
   it('should have a name within the 1st span tag', function() {
     var a = list.render();
     var span = a.querySelectorAll("span")[0];
-    console.log(span);
     expect(span.innerText).to.equal(list.name);
   });
 
@@ -90,10 +89,11 @@ describe("ShoppingListItem Class", function() {
 
 
 describe("ShoppingList Class", function() {
-
+  var test;
   before(function(){
     shop = new ShoppingList();
-
+    list = new ShoppingListItem();
+    test = new ShoppingListItem("carrrot", "orange");
   });
 
   it('should be a class', function() {
@@ -113,10 +113,9 @@ describe("ShoppingList Class", function() {
   });
 
   it('addItem should have a parameter that is an instanceof ShoppingListItem', function() {
-
-   console.log( expect(list).to.be.an.instanceof(ShoppingListItem));
+    shop.addItem(test);
+    expect(test).to.be.an.instanceof(ShoppingListItem);
   });
-
 
 });
 
