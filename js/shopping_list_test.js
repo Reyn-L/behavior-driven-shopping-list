@@ -118,17 +118,14 @@ describe("ShoppingList Class", function() {
   });
 
 it('should throw a forced error', function(){
-  expect(shop.throwErr.bind(shop)).to.throw();
+  expect(shop.addItem.bind(shop, 'clear')).to.throw('Invalid item') ;
 });
 
-
+it('ShoppingList should have method named removeItem()', function(){
+  expect(shop.removeItem).to.be.a('function');
 });
 
-
- /*it('should throw when wrapped in anonymouse function', function() {
-  expect(function() ( jeese.throwErr();)).to.throw();
-}) ;
-*/
+});
 
 
 
