@@ -65,32 +65,27 @@ describe("ShoppingListItem Class", function() {
     expect(list.render()).to.have.property('className');
   });
 
-  //Come back to, may not be correct.
   it('className should equal to completed_[is_done]', function() {
     expect(list.render().className).to.equal("completed_" + list.is_done);
   });
 
-  it('should create span element inside render()', function(){
-    expect(list.render()).to.be.instanceof(Element);
-  });
-
-  it('should have a name within the span tag', function() {
-    console.log(list.render());
-    expect(list.render().innerText).to.equal(list.name);
-
-  });
-
-  it('should create span element inside render()', function(){
-    expect(list.render()).to.be.instanceof(Element);
-  });
-
-  it('should have a description within the span tag', function() {
-    expect(list.render().innerText).to.equal(list.description);
-  });
-
-  it('should append 2 span tags to li element', function(){
+  it('should append two span tags to li element', function(){
     expect(list.render().childElementCount).to.equal(2);
   });
+
+  it('should have a name span tag', function() {
+    var a = list.render();
+    var span = a.querySelectorAll("span")[0];
+
+    console.log(span);
+    expect(span.innerText).to.equal(list.name);
+
+  });
+
+ /* it('should have a description within the span tag', function() {
+    expect(list.render().innerText).to.equal(list.description);
+  });
+*/
 
 
 
