@@ -103,6 +103,9 @@ describe("ShoppingList Class", function() {
     expect(shop).to.have.property('items');
   });
 
+  it('should have a contructor method that sets item to an empty array', function() {
+    expect(shop.items).to.equal([]);
+  });
 
 
 
