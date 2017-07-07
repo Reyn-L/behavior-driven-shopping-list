@@ -104,7 +104,11 @@ describe("ShoppingList Class", function() {
   });
 
   it('should have a contructor method that sets item to an empty array', function() {
-    expect(shop.items).to.equal([]);
+    expect(shop.items).to.deep.equal([]);
+  });
+
+  it('ShoppingList should have method named addItem()', function(){
+    expect(shop.addItem()).to.be.a('function');
   });
 
 
