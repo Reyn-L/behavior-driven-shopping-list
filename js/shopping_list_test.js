@@ -7,7 +7,7 @@ var shop;
 describe("ShoppingListItem Class", function() {
 
   before(function(){
-    list = new ShoppingListItem("Jody", "Black");
+    list = new ShoppingListItem("Broccoli", "Healthy and very delicious vegetables.");
   });
 
   it('should be a class', function() {
@@ -27,11 +27,11 @@ describe("ShoppingListItem Class", function() {
   });
 
   it('should have a constructor "name"', function() {
-    expect(list.name).to.equal("Jody");
+    expect(list.name).to.equal(list.name);
   });
 
   it('should have a constructor named "description"', function() {
-    expect(list.description).to.equal("Black");
+    expect(list.description).to.equal(list.description);
   });
 
   it('should have a method named check', function(){
@@ -93,6 +93,7 @@ describe("ShoppingList Class", function() {
 
   before(function(){
     shop = new ShoppingList();
+
   });
 
   it('should be a class', function() {
@@ -107,10 +108,14 @@ describe("ShoppingList Class", function() {
     expect(shop.items).to.deep.equal([]);
   });
 
-  it('ShoppingList should have method named addItem()', function(){
-    expect(shop.addItem()).to.be.a('function');
+  it('ShoppingList should have method named addItem', function(){
+    expect(shop.addItem).to.be.a('function');
   });
 
+  it('addItem should have a parameter that is an instanceof ShoppingListItem', function() {
+
+   console.log( expect(list).to.be.an.instanceof(ShoppingListItem));
+  });
 
 
 });
