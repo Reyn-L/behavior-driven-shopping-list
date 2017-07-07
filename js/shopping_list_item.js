@@ -24,8 +24,10 @@ class ShoppingListItem {
     let spanTwo = document.createElement('span');
     spanTwo.innerText = this.description;
 
+    li.appendChild(span);
+    li.appendChild(spanTwo);
 
-    
+console.log(li);
     return li;
   }
 
