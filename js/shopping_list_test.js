@@ -61,7 +61,7 @@ describe("ShoppingListItem Class", function() {
     expect(list.render()).to.be.instanceof(Element);
   });
 
-  it('element li should have a propertyof className',function() {
+  it('element li should have a property of className',function() {
     expect(list.render()).to.have.property('className');
   });
 
@@ -74,6 +74,9 @@ describe("ShoppingListItem Class", function() {
     expect(list.render()).to.be.instanceof(Element);
   });
 
+  it('should have a name within the span tag', function() {
+    expect(list.render().span.innertext).to.equal(list.name);
+  });
 
 });
 
