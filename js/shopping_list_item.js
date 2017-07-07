@@ -30,3 +30,9 @@ class ShoppingListItem {
     return li;
   }
 }
+
+class ShoppingList {
+  constructor(){
+    
+  }
+}

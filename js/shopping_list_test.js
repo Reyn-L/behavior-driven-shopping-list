@@ -99,6 +99,10 @@ describe("ShoppingList Class", function() {
     expect(ShoppingList).to.be.a('function');
   });
 
+  it('should have property named items', function(){
+    expect(shop).to.have.property('items');
+  });
+
 
 
 
